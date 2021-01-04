@@ -139,7 +139,7 @@ client.on("message", message => {
   }
 
   if (message.content === prefix + "avatar") {
-    const avatar = new Discord.MessageEmbed()
+    const avatar = new MessageEmbed()
     .setTitle("Avatar")
 .setDescription(`[Descargar Avatar](${user.displayAvatarURL({
         format: 'png',
