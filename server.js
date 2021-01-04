@@ -149,7 +149,7 @@ client.on("message", message => {
 .setColor("RANDOM")
 .setFooter(`Avatar de solicitado por: ${msg.member.displayName}`);
 msg.channel.send(avatar)
-  }      
+       
     message.channel.send(embed);
   }
   if (message.content === prefix + "help") {
