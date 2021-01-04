@@ -144,7 +144,7 @@ client.on("message", message => {
 .setDescription(`[Descargar Avatar]` + {message.author.displayAvatarURL({
         format: 'png',
         dynamic: true
-    })})
+    })}))
 .setImage(message.author.displayAvatarURL({dynamic: true, size : 1024 }))
 .setColor("RANDOM")
 .setFooter(`Avatar de solicitado por` + message.member.displayName);
