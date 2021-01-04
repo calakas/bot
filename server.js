@@ -139,17 +139,18 @@ client.on("message", message => {
   }
 
   if (message.content === prefix + "avatar") {
-    const avatar = new MessageEmbed()
+    const avatar = new Discord.MessageEmbed()
     .setTitle("Avatar")
-.setDescription(`[Descargar Avatar]`+({user.displayAvatarURL({
+.setDescription(`[Descargar Avatar](${user.displayAvatarURL({
         format: 'png',
         dynamic: true
-    })}))
+    })})`)
 .setImage(user.displayAvatarURL({dynamic: true, size : 1024 }))
 .setColor("RANDOM")
-.setFooter(`Avatar de solicitado por:` + message.member.displayName);
-message.channel.send(avatar);
-       }
+.setFooter(`Avatar de solicitado por: ${msg.member.displayName}`);
+msg.channel.send(avatar)
+  }      
+
   if (message.content === prefix + "help") {
     const embed = new MessageEmbed()
       .setTitle("💀LISTA DE COMANDOS💀")
