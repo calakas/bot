@@ -123,13 +123,13 @@ client.on("message", message => {
     const embed = new MessageEmbed()
       .setTitle(":iphone: SERVER INFO :iphone:")
       .setAuthor(message.member.displayName, message.author.displayAvatarURL())
-      .setColor(0xf390)
+      .setColor("RANDOM")
       .setDescription(" Bot created by INF Jeremy")
       .addField("Nombre del servidor: ", message.guild.name)
       .addField("ID:", message.guild.id)
       .addField("REGION: ", message.guild.region)
       .addField("MIEMBROS: ", message.guild.memberCount)
-      .setImage(message.guild.iconURL())
+      .setImage(message.author.displayAvatarURL({dynamic: true, size : 1024 }))
       .setFooter(
         "Consulta por: " + message.member.displayName,
         message.author.displayAvatarURL()
@@ -155,7 +155,7 @@ message.channel.send(avatar)
   if (message.content === prefix + "help") {
     const embed = new MessageEmbed()
       .setTitle("💀LISTA DE COMANDOS💀")
-      .setColor(0x3333ff)
+      .setColor("RANDOM")
       .setDescription("Lista de comandos del bot V1.0")
       .addField(
         "1.ping",
@@ -204,8 +204,12 @@ message.channel.send(avatar)
     if (message.content === prefix + "icono") {
       const embed = new MessageEmbed()
         .setTitle("ICONO DEL SERVIDOR")
-        .setImage(message.guild.iconURL())
-        .setColor("RED")
+        ..setDescription(`[Descargar Avatar](${message.author.displayAvatarURL({
+        format: 'png', 
+        dynamic: true
+    })})`)
+.setImage(message.author.displayAvatarURL({dynamic: true, size : 1024 }))
+        .setColor("RANDOM")
         .setFooter(message.member.displayName,message.author.displayAvatarURL())
         .setTimestamp()
       message.channel.send(embed);
