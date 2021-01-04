@@ -139,17 +139,18 @@ client.on("message", message => {
   }
 
   if (message.content === prefix + "avatar") {
-    const avatar = new MessageEmbed()
+     const avatar = new MessageEmbed()
     .setTitle("Avatar")
-.setDescription(`[Descargar Avatar]` + {message.author.displayAvatarURL({
+.setDescription(`[Descargar Avatar](${message.author.displayAvatarURL({
         format: 'png',
         dynamic: true
-    })}))
+    })})`)
 .setImage(message.author.displayAvatarURL({dynamic: true, size : 1024 }))
 .setColor("RANDOM")
-.setFooter(`Avatar de solicitado por` + message.member.displayName);
-message.channel.send(avatar);
+.setFooter(`Avatar de solicitado por: ${message.member.displayName}`);
+message.channel.send(avatar)
   }      
+
 
   if (message.content === prefix + "help") {
     const embed = new MessageEmbed()
