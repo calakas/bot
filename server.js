@@ -129,7 +129,7 @@ client.on("message", message => {
       .addField("ID:", message.guild.id)
       .addField("REGION: ", message.guild.region)
       .addField("MIEMBROS: ", message.guild.memberCount)
-      .setImage(message.author.displayAvatarURL({dynamic: true, size : 1024 }))
+      .setImage(message.guild.iconURL({dynamic: true, size : 1024 }))
       .setFooter(
         "Consulta por: " + message.member.displayName,
         message.author.displayAvatarURL()
@@ -204,11 +204,11 @@ message.channel.send(avatar)
     if (message.content === prefix + "icono") {
       const embed = new MessageEmbed()
         .setTitle("ICONO DEL SERVIDOR")
-        .setDescription(`[Descargar Avatar](${message.author.displayAvatarURL({
+        .setDescription(`[Descargar imagen](${message.guild.iconURL({
         format: 'png', 
         dynamic: true
     })})`)
-.setImage(message.author.displayAvatarURL({dynamic: true, size : 1024 }))
+.setImage(message.guild.iconURL({dynamic: true, size : 1024 }))
         .setColor("RANDOM")
         .setFooter(message.member.displayName,message.author.displayAvatarURL())
         .setTimestamp()
