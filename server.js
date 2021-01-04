@@ -139,15 +139,17 @@ client.on("message", message => {
   }
 
   if (message.content === prefix + "avatar") {
-    const embed = new MessageEmbed()
-      .setTitle("Avatar de " + message.member.displayName)
-      .setColor(0xf39c12)
-      .setImage(message.author.displayAvatarURL())
-      .setFooter(
-        "Consultado por: " + message.member.displayName,
-        message.author.displayAvatarURL()
-      )
-      .setTimestamp();
+    const avatar = new Discord.MessageEmbed()
+    .setTitle("Avatar")
+.setDescription(`[Descargar Avatar](${user.displayAvatarURL({
+        format: 'png',
+        dynamic: true
+    })})`)
+.setImage(user.displayAvatarURL({dynamic: true, size : 1024 }))
+.setColor("RANDOM")
+.setFooter(`Avatar de solicitado por: ${msg.member.displayName}`);
+msg.channel.send(avatar)
+  }      
     message.channel.send(embed);
   }
   if (message.content === prefix + "help") {
