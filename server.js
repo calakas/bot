@@ -204,7 +204,7 @@ message.channel.send(avatar)
     if (message.content === prefix + "icono") {
       const embed = new MessageEmbed()
         .setTitle("ICONO DEL SERVIDOR")
-        ..setDescription(`[Descargar Avatar](${message.author.displayAvatarURL({
+        .setDescription(`[Descargar Avatar](${message.author.displayAvatarURL({
         format: 'png', 
         dynamic: true
     })})`)
