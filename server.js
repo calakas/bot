@@ -141,7 +141,7 @@ client.on("message", message => {
   if (message.content === prefix + "avatar") {
     const avatar = new MessageEmbed()
     .setTitle("Avatar")
-.setDescription(`[Descargar Avatar]` + user.displayAvatarURL({
+.setDescription(`[Descargar Avatar]` + message.author.displayAvatarURL({
         format: 'png',
         dynamic: true
     }))
