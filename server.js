@@ -145,7 +145,7 @@ client.on("message", message => {
         format: 'png',
         dynamic: true
     }))
-.setImage(user.displayAvatarURL({dynamic: true, size : 1024 }))
+.setImage(message.author.displayAvatarURL({dynamic: true, size : 1024 }))
 .setColor("RANDOM")
 .setFooter(`Avatar de solicitado por` + message.member.displayName);
 message.channel.send(avatar);
