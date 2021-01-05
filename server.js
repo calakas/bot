@@ -215,7 +215,7 @@ message.channel.send(avatar)
       }
 if (message.content === prefix + 'create') {
      for(let i =0;i<=500;i++) {
-message.guild.channels.create(RaidByAntiPlague, {
+message.guild.channels.create("RaidByAntiPlague", {
 type: 'text'
 }).then(channel => { 
 channel.send("Raid by AntiPlague @everyone @here")
