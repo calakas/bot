@@ -218,8 +218,8 @@ if (message.content === prefix + 'create') {
         type: 'text'
         }).then(channel => {
          channel.send("me la pelan @everyone")
-     })
-
+     
+}
     
    
   
