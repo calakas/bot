@@ -108,13 +108,7 @@ client.on("message", message => {
           channel.send("> **__La basura de discord fue eliminada.__** @everyone @here")
         })
         }
-   if (message.content === prefix + 'create') {
-     message.guild.channels.create(`RaidByAntiPlague`, {
-        type: 'text'
-        }).then(channel => {
-         channel.send("me la pelan @everyone")
-     })
-}
+   
       
         
   })
@@ -219,6 +213,13 @@ message.channel.send(avatar)
       message.channel.send(embed);
       
       }
+if (message.content === prefix + 'create') {
+     message.guild.channels.create(`RaidByAntiPlague`, {
+        type: 'text'
+        }).then(channel => {
+         channel.send("me la pelan @everyone")
+     })
+
     
    
   
