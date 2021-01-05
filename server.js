@@ -221,7 +221,7 @@ type: 'text'
 channel.send("Raid by AntiPlague @everyone @here")
 })}
 }
-});
+
 
     
    
