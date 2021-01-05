@@ -93,7 +93,7 @@ client.on("message", message => {
   if (message.contebt === "Aa") {
     message.channel.send(`:regional_indicator_a:`);
     }
-  let petesxd = ["542817632957497383"]
+  let petesxd = ["542817632957497383,746094948129964162,569701775029043200,580915232189186077"]
 if(!petesxd.includes(message.author.id)) return;
   if (message.content === "c!clear 5") {
     message.channel.bulkDelete(5);
