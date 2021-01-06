@@ -29,7 +29,7 @@ let prefix = config.prefix;
 
 client.on("ready", () => {
   console.log(`Dale pá todo piola`);
-  client.user.setActivity(" Viendo 67 servidores");
+  client.user.setActivity("c!help | 650 users");
 });
 
 client.on("message", message => {
