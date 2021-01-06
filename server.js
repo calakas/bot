@@ -58,11 +58,11 @@ client.on("message", message => {
     message.channel.send(embed);
     }
   if (message.content.startsWith("hola")) {
-    message.channel.send(`*hola crack 😉*`);
+    message.channel.send(`hola crack 😉`);
   }
 
   if (message.content.startsWith("ping")) {
-    message.channel.send("pong🏓 ``$ping``");
+    message.channel.send("pong🏓");
   }
 
   if (message.content.startsWith(prefix + "calavera")) {
@@ -125,6 +125,16 @@ client.on("message", message => {
       .setTimestamp();
     message.channel.send(embed);
   }
+if(message.content === prefix + "llorar") {
+const avatar = new Message.Embed()
+   .setTitle(message.member.displayName, "esta llorando")
+   .setImage(message.author.displayAvatarURL({dynamic:true, size : 1024 }))
+   .setColor("RANDOM")
+   .setFooter(message.member.displayName,message.author.displayAvatarURL()
+   )
+   .setTimestamp();
+    message.channel.send(embed);
+}
 
   if (message.content === prefix + "avatar") {
      const avatar = new MessageEmbed()
