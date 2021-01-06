@@ -128,6 +128,10 @@ client.on("message", message => {
 if(message.content === prefix + "llorar") {
 const embed = new MessageEmbed()
    .setTitle(message.member.displayName, "esta llorando")
+   .setDescription(`[URL](${https://media.tenor.com/images/6abfd1c8889e0c5a2db0e1039d499c9f/tenor.gif({
+        format: 'png',
+        dynamic: true
+    })})`)
    .setImage(https://media.tenor.com/images/6abfd1c8889e0c5a2db0e1039d499c9f/tenor.gif({dynamic:true, size : 1024 }))
 
    .setColor("RANDOM")
