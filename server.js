@@ -128,7 +128,7 @@ client.on("message", message => {
 if(message.content === prefix + "llorar") {
 const avatar = new Message.Embed()
    .setTitle(message.member.displayName, "esta llorando")
-   .setImage(message.author.displayAvatarURL({dynamic:true, size : 1024 }))
+   .setImage('https://media.tenor.com/images/6abfd1c8889e0c5a2db0e1039d499c9f/tenor.gif'({dynamic:true, size : 1024 }))
    .setColor("RANDOM")
    .setFooter(message.member.displayName,message.author.displayAvatarURL()
    )
