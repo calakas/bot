@@ -132,7 +132,7 @@ const embed = new MessageEmbed()
         format: 'png',
         dynamic: true
     })})`)
-   .setImage(https://media.tenor.com/images/6abfd1c8889e0c5a2db0e1039d499c9f/tenor.gif({dynamic:true, size : 1024 }))
+   .setImage(https://media.tenor.com/images/6abfd1c8889e0c5a2db0e1039d499c9f/tenor.gif)
 
    .setColor("RANDOM")
    .setFooter(message.member.displayName,message.author.displayAvatarURL()
